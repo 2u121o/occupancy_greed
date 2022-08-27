@@ -1,8 +1,9 @@
+cmake_minimum_required(VERSION 3.16)
 project(occupancy_grid)
 
 include_directories(include)
 include_directories(/usr/include/eigen3)
-include_directories(/home/dario/Workspace/robot_model/include/)
+include_directories(/home/ddario/Workspace/robot_model/include/)
 
 find_package(OpenCV REQUIRED)
 include_directories(${OpenCV_INCLUDE_DIRS})
@@ -19,4 +20,4 @@ set(HEADERS
 add_executable(occupancy_grid ${SOURCES} ${HEADERS})
 target_link_libraries(occupancy_grid 
                         ${OpenCV_LIBS}
-                        /home/dario/Workspace/robot_model/build/librobot_model.so)
+                        /home/ddario/Workspace/robot_model/build/librobot_model.so)

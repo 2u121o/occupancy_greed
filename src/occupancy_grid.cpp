@@ -9,9 +9,9 @@ OccupancyGrid::OccupancyGrid(int width, int heigth): width_(width), heigth_(heig
 void OccupancyGrid::updateMap(cv::Point p0, cv::Point p1, double range){
 
     
-    if(p1.x == -1){
+    if(range == -1){
         //no detectecd any points
-          cv::circle(map_, p0, 50, cv::Scalar( 255, 255, 255 ), cv::FILLED );
+          cv::line(map_, p0, p1, cv::Scalar( 255, 255, 255 ));
     }
     else{
         //point detected
